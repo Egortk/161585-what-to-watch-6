@@ -29,7 +29,7 @@ const App = (props) => {
         <Route exact path="/player/:id">
           <Player />;
         </Route>
-        <Route exact path="/login">
+        <Route exact path="/signin">
           <SignIn />;
         </Route>
         <Route>
