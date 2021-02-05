@@ -17,23 +17,23 @@ const App = (props) => {
         <Route exact path="/">
           <MainScreen movies={movies} />;
         </Route>
-        <Route exact path="/movie/:id">
+        <Route exact path="/movies/:id">
           <MoviePage />;
         </Route>
-        <Route exact path="/movie/:id/review">
+        <Route exact path="/movies/:id/review">
           <AddReview />;
         </Route>
-        <Route exact path="/my-list">
+        <Route exact path="/mylist">
           <MyList />;
         </Route>
         <Route exact path="/player/:id">
           <Player />;
         </Route>
-        <Route exact path="/sign-in">
+        <Route exact path="/login">
           <SignIn />;
         </Route>
         <Route>
-          <NotFoundPage path="/NotFoundPage"/>
+          <NotFoundPage />
         </Route>
       </Switch>
     </BrowserRouter>
@@ -41,7 +41,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  movies: PropTypes.array.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default App;
